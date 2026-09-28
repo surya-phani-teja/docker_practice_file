@@ -1,2 +1,5 @@
-FROM run:v1
-CMD ["nginx", "g", "daemon-off"]
+FROM almalinux
+
+RUN dnf install -y nginx
+
+CMD ["nginx", "-g", "daemon off;"]
